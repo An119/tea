@@ -1,0 +1,102 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::after, *::before{
+    box-sizing: inherit;
+
+    margin: 0; /*обнуление браузерных настроек*/ 
+    padding: 0;
+}
+
+ul{
+    list-style-type: none; /*уборка точек в списке*/ 
+}
+
+a{
+    text-decoration: none;  /*уборка нижнего подчеркивания ссылок*/ 
+    color: inherit; /*цвет ссылок (базовый-родителя-body)*/ 
+}
+
+.container{
+    max-width: 1240px; /*мах ширина блока - настоящаяя ширина 1200, но добавим 40, из за падингов 20 лево и 20 право*/
+    margin: 0 auto; /*блок по центру*/
+    padding-left: 20px; /*отступ с лево*/
+    padding-right: 20px; /*отступ с право*/
+}
+
+body{
+    color: #151618;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 0; /*внешнии отступы верх-низ 30, право-лево 0*/
+    min-height: 140px; /*мин высота блока*/
+}
+
+.logo{
+    margin-bottom: 35px;  /*сделаем логотип больше, чтбоы он был больше навигации по середине-т.к на макете*/
+}
+
+.menu__list{
+    display: flex;
+    align-items: center;
+    gap: 0 65px;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 85px; /*отодвинуть навигацию от логотипа*/
+}
+
+.user-actions{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.user-actions__item-search{
+    margin-left: 80px; /*настоящий отступ 100, но пишем 80, потому что геп между иконками прописан 20, при сложении будет 100*/
+}
+
+.top{
+    background-image: url(../image/top-bg.jpg); /*картинка на фон*/
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.top__inner{
+    min-height: 500px; /*размер блока-картинки*/
+    color: #fff;
+    font-family: 'Cormorant', serif; 
+    font-weight: 400;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.top__title{
+    font-size: 60px;
+    margin-bottom: 20px; /*отступ вниз*/
+    max-width: 780px;/*ограничение ширины текста*/
+    line-height: 1;
+    font-weight: 400;
+}
+
+.top__text{
+    font-size: 24px;
+    margin-bottom: 48px;
+    max-width: 560px;
+    line-height: normal;
+}
