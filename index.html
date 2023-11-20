@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+    <!--затемнение для открытого меню-тел--> 
+    <div class="menu--close"></div>
     <!--шапка сайта--> 
     <header class="header">
         <div class="container">
@@ -21,7 +23,23 @@
                 </a>
                 <!--навигация--> 
                 <nav class="menu">
+                    <!--кнопка навигации--> 
+                    <button class="menu__btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
                     <ul class="menu__list">
+                        <!--кнопка закрытия новигации на тел-крестик--> 
+                        <li class="menu__close">
+                            <button class="menu__close-btn">
+                                <img src="image/close.svg" alt="">
+                            </button>
+                        </li>
+
+                        <!--пункты-меню--> 
                         <li class="menu__item"><a href="#" class="menu__link">Black</a>
                         </li>
                         <li class="menu__item"><a href="#" class="menu__link">Green</a>
@@ -32,6 +50,43 @@
                         </li>
                         <li class="menu__item"><a href="#" class="menu__link">Pu-erh</a>
                         </li>
+
+                        <!--дополнение к навигации на тел--> 
+                        <li class="mobile-nav">
+                            <ul class="mobile-menu">
+                                <li class="mobile-menu__item">
+                                    <a href="#" class="mobile-menu__link">Contact Us</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="#" class="mobile-menu__link">Our Blog</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="#" class="mobile-menu__link">Shipping and Delivery</a>
+                                </li>
+                            </ul>
+                            <!--дополнение к навигации - нижние иконки на тел--> 
+                            <ul class="mobile-actions">
+                                <!--корзина--> 
+                                <li class="mobile-actions__item">
+                                    <a href="#" class="mobile-action__link">
+                                        <img src="image/cart.svg" alt="">
+                                    </a>
+                                </li>
+                                <!--пользователь--> 
+                                <li class="mobile-actions__item">
+                                    <a href="#" class="mobile-action__link">
+                                        <img src="image/user.svg" alt="">
+                                    </a>
+                                </li>
+                                <!--поисковая строка--> 
+                                <li class="mobile-actions__item">
+                                    <a href="#" class="mobile-action__link">
+                                        <img src="image/search.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </nav>
                 <!--элементы для пользователя--> 
