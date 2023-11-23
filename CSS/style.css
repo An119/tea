@@ -18,6 +18,18 @@ a{
     color: inherit; /*цвет ссылок (базовый-родителя-body)*/ 
 }
 
+.title{
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Cormorant', serif; 
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.reviews__item.reviews__item--hide{
+    display: none;
+}
+
 button{
     padding: 0;
     border: none;
@@ -156,6 +168,61 @@ body{
     margin: 150px auto; /*расположения контейнера текста*/
 }
 
+.assortment{
+    margin-bottom: 150px;
+}
+
+.assortment__list{
+    text-align: center;
+    display: flex;
+    gap: 0 40px;
+}
+
+.assortment__img{ /*размеры картинок*/
+    max-width: 208px; 
+    max-height: 208px;
+    width: 100%;
+}
+
+.assortment__name{
+    padding-top: 10px;
+    font-family: 'Cormorant', serif; 
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.reviews{
+    background-color: #F7F2EA;
+    padding: 60px 0;
+}
+
+.reviews__list{
+    display: flex;
+    gap: 0 26px;
+    justify-content: center;
+}
+
+.reviews__item{
+    flex-basis: 280px; /*ширина блока с текстом*/
+}
+
+.reviews__text{
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.reviews__name{
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+
+
+
+
 
 
 
@@ -169,7 +236,6 @@ body{
     .menu__list{
         margin-left: 60px;
     }
-
     .logo{
         margin-bottom: 0;
     }
@@ -180,7 +246,17 @@ body{
         margin-top: 120px;
         margin-bottom: 135px;
     }
+    .assortment{
+        margin-bottom: 120px;
+    }
+    .assortment__list{
+        gap: 0;
+    }
+    .reviews__item:last-child{ /*убирает четвертый отзыв*/
+        display: none;
+    }
 }
+
 
 @media (max-width: 860px) {
     .menu__list{
@@ -248,6 +324,7 @@ body{
     }
 }
 
+
 @media (max-width: 768px) {
     .header__inner{
         padding-left: 64px;
@@ -256,7 +333,19 @@ body{
     .blockquote__text{
         max-width: 640px;
     }
+    .assortment__list{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .reviews__item:last-child{ /*выводит четвертый отзыв*/
+        display: block;
+    }
+    .reviews__list{
+        flex-wrap: wrap;
+        gap: 30px 76px;
+    }
 }
+
 
 @media (max-width: 680px) {
     .container{
@@ -279,6 +368,7 @@ body{
     }
 }
 
+
 @media (max-width: 480px) {
     .logo{
         margin-right: 80px;
@@ -289,9 +379,26 @@ body{
     .menu__list{
         width: 360px;
     }
+    .assortment{
+        margin-bottom: 60px;
+    }
+    .reviews__list{
+        gap: 30px 20px;
+    }
+    .reviews{
+        padding: 50px 0;
+    }
+    .reviews__item{
+        flex-basis: 220px;
+    }
 }
 
+
 @media (max-width: 360px) {
+    .title{
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
     .logo{
         margin-right: 50px;
     }
@@ -317,4 +424,19 @@ body{
         margin-top: 70px;
         margin-bottom: 80px;
     }
+    .assortment__img{
+        max-width: 170px;
+    }
+    .assortment{
+        margin-bottom: 80px;
+    }
+    .reviews__item{
+        flex-basis: 100%;
+    }
+    .reviews__item:last-child,
+    .reviews__item:first-child{ /*выводит четвертый отзыв*/
+        display: none;
+    }
+
+
 }
