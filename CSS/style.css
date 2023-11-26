@@ -47,7 +47,7 @@ body{
     color: #151618;
     font-size: 20px;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: normal;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -154,7 +154,6 @@ body{
     font-size: 24px;
     margin-bottom: 48px;
     max-width: 560px;
-    line-height: normal;
 }
 
 .blockquote__text{
@@ -162,7 +161,6 @@ body{
     font-family: 'Cormorant', serif; 
     font-size: 40px;
     font-style: italic;
-    line-height: normal;
 
     max-width: 704px; /*ограничение ширины текста*/
     margin: 150px auto; /*расположения контейнера текста*/
@@ -215,6 +213,184 @@ body{
 .reviews__name{
     font-weight: 600;
     font-style: normal;
+}
+
+.main-blog{
+    padding: 150px 0;
+}
+
+.main-blog__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 58px;
+}
+
+.main-blog__item{
+    flex-basis: 542px;
+    display: flex;
+    gap: 0 20px;
+}
+
+.main-blog__item-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-blog__item-title{
+    font-family: 'Cormorant', serif; 
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    min-height: 86px;
+}
+
+.main-blog__item-author{
+    font-size: 13px;
+}
+
+.main-blog__item-link{
+    margin-top: auto;
+    font-size: 13px;
+    position: relative;
+}
+
+.main-blog__item-link::after{
+    content: '';
+    background-image: url(../image/arrow.svg);
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    margin-left: 8px;
+    bottom: 3px;
+}
+
+.main-blog__link{
+    padding: 12px 41px;
+    display: flex;
+    justify-content: center;
+    margin: 72px auto 0;
+    border: 1px solid #151618;
+    width: 152px;
+}
+
+.mailing-list{
+    padding: 100px 0;
+    background-color: #F7F2EA;
+    background-image: url(../image/mailing-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.mailing-list__title{
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.mailing-list__inner{
+    display: flex;
+    gap: 60px 40px;
+}
+
+.mailing-list__text{
+    line-height: 1.5;
+    flex-basis: 580px;
+}
+
+.mailing-list__from{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 580px;
+}
+
+.mailing-list__email{
+    border: none; /*убирает линии у формы заполнения*/
+    border-bottom: 1px solid #b8b58b; /*делаем нижнюю линию как в figme*/
+    background-color: transparent; /*прозрачность*/
+    padding: 3px 15px;
+    width: 437px;
+    margin-right: 25px;
+
+    font-family: 'Open Sans', sans-serif; /*стилизация текста который будет вводить пользователь внутри формы*/
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5; 
+    color: #151618;
+}
+
+.mailing-list__email::placeholder{ /*стилизация строчки с буквами внутри формы заполнения*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5; 
+    color: #b8b58b;
+}
+
+.mailing-list__btn{
+    background-color: #fff;
+    border: 1px solid #151618;
+    font-family: 'Open Sans', sans-serif;
+    padding: 12px 41px;
+    font-size: 20px;
+    font-weight: 300;
+
+    cursor: pointer;
+}
+
+.checkbox__text{
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.mailing-list__lable{
+    margin-top: 16px;
+}
+
+.checkbox{ /*!убираем базовый чекбокс*/
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+
+    padding-left: 20px;
+}
+
+.checkbox-style{ /*!стилизуем свой чекбокс*/
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #151618;
+    margin-top: 5px;
+}
+
+.checkbox:checked + .checkbox-style{ /*!стилизуем нажатие чекбокса*/
+    background-color: #151618; /*если нужна не заливка, а галочка, вставляем image*/
+}
+
+.prioritise{
+    padding: 150px 0;
+}
+
+.prioritise__list{
+    text-align: center;
+    display: flex;
+    gap: 30px 47px;
+
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.prioritise__title{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.prioritise__text{
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 
 
