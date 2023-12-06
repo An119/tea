@@ -9,6 +9,21 @@ html{
     padding: 0;
 }
 
+html, /*!прибитие подвала*/ 
+body{
+ height: 100%;
+}
+
+.wrapper{ /*!прибитие подвала*/ 
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex-grow: 1;
+}
+
 ul{
     list-style-type: none; /*уборка точек в списке*/ 
 }
@@ -393,6 +408,131 @@ body{
     font-weight: 600;
 }
 
+.footer{
+    padding: 100px 0 20px;
+    background-color: #F7F2EA;
+}
+
+.footer__inner{
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 40px;
+}
+
+.footer__products-title,
+.footer__company-title,
+.footer__contacts-title{
+    font-weight: 400;
+    font-family: 'Cormorant', serif;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.footer__products-item,
+.footer__company-item{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer__blockquote-text{
+    font-style: italic;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer__blockquote-author{
+    font-size: 12px;
+    font-style: normal;
+}
+
+.footer__blockquote-author span{ /*span для переноса текста под текст (можно с помощью /dr в html, зависит от ТЗ)*/
+    display: block;
+}
+
+.footer__contacts-text{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.footer__nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__nav-logo{
+    margin-right: 40px;
+}
+
+.footer__nav-contacts{
+    margin-top: 20px;
+}
+
+.footer__nav-phone,
+.footer__nav-email{
+    font-size: 13px;
+    position: relative;
+    padding-left: 32px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer__nav-phone::before,
+.footer__nav-email::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 22px;
+    height: 16px;
+    background-image: url(../image/mail.svg);
+}
+
+.footer__nav-phone::before{
+    background-image: url(../image/phone.svg);
+    width: 21px;
+    height: 21px;
+}
+
+.footer__social{
+    margin-top: 40px;
+    margin-left: 115px;
+}
+
+.footer__social-list{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.footer__social-link{
+    display: grid;
+}
+
+.footer__bottom{
+    display: flex;
+}
+
+.footer__copy{
+    margin-right: 192px;
+    font-size: 16px;
+}
+
+.partners-logo{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -465,6 +605,19 @@ body{
     }
     .prioritise__list{
         gap: 30px 210px;
+    }
+
+    .footer__blockquote{
+        width: 270px;
+    }
+    .footer__blockquote-text{
+        margin-top: 0;
+    }
+    .footer__inner{
+        margin-bottom: 55px;
+    }
+    .footer__copy{
+        margin-right: 70px;
     }
 }
 
@@ -573,6 +726,18 @@ body{
     .prioritise__list{
         gap: 30px 133px;
     }
+    .footer__inner{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    .footer__products,
+    .footer__company{
+        grid-row: span 3;
+    }
+    .footer__contacts{
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
 }
 
 
@@ -645,6 +810,50 @@ body{
     }
     .prioritise{
         padding: 60px 0;
+    }
+    .footer__inner{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 146px;
+    }
+    .footer__company{
+        margin-bottom: 30px;
+    }
+    .footer__blockquote{
+        width: 100%;
+    }
+    .footer__blockquote-author span{ 
+        display: inline;
+    }
+    .footer__blockquote-text{
+        margin-bottom: 0;
+    }
+    .footer__contacts{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .footer__contacts-title{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .footer__contacts-text{
+        text-align: center;
+    }
+    .footer__nav{
+        flex-wrap: nowrap;
+    }
+    .footer__social{
+        margin-left: 30px;
+    }
+    .footer__copy{
+        margin-right: auto;
+    }
+    .footer__products-title,
+    .footer__company-title{
+        margin-bottom: 30px;
+    }
+    .footer{
+        padding: 50px 0 10px;
     }
 }
 
@@ -726,5 +935,22 @@ body{
     }
     .prioritise__list{
         gap: 40px 100px;
+    }
+    .footer__inner{
+        gap: 86px;
+    }
+    .footer__company{
+        margin-bottom: -60px;
+    }
+    .footer__contacts {
+        margin-top: -40px;
+    }
+    .footer__nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer__social{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
