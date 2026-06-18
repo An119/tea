@@ -288,6 +288,12 @@ body {
   margin: 72px auto 0;
   border: 1px solid #151618;
   width: 154px;
+  transition: 0.5s;
+}
+.main-blog__link:hover{
+  background: #f7f2ea;
+  border: 1px solid #b8b58b;
+  color: #b8b58b;
 }
 
 .mailing-list {
@@ -354,8 +360,14 @@ body {
   padding: 12px 41px;
   font-size: 20px;
   font-weight: 300;
-
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.mailing-list__btn:hover{
+  background:#f7f2ea;
+  border: 1px solid #b8b58b;
+  color: #b8b58b;
 }
 
 .checkbox__text {
