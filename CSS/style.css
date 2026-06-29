@@ -16,6 +16,10 @@ body {
   height: 100%;
 }
 
+.body--no-scroll{
+  overflow: hidden;
+}
+
 .wrapper {
   /*!прибитие подвала*/
   min-height: 100%;
